@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
       redirect_to root_path , notice: 'メッセージを保存しました'
     else 
       @messages = Message.all
-      flash.now[:alert] ="メッセージの保存に失敗しました"
+      flash.now[:alert] = "メッセージの保存に失敗しました"
       render 'index'
     end
     
